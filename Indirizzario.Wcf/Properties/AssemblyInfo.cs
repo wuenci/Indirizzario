@@ -1,15 +1,15 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Indirizzaio.FrontEnd")]
+[assembly: AssemblyTitle("Indirizzario.Wcf")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Indirizzaio.FrontEnd")]
+[assembly: AssemblyProduct("Indirizzario.Wcf")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fd019338-6551-4c68-bce5-757d8453318e")]
+[assembly: Guid("4d187a85-f427-477f-bc58-a3301e282e73")]
 
 // Version information for an assembly consists of the following four values:
 //

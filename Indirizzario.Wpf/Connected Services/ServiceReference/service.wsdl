@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Indirizzario.Wcf.Contracts" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Indirizzario.Wcf.Contracts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Indirizzario.Wcf.Contracts/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/Indirizzario/service?xsd=xsd0" namespace="Indirizzario.Wcf.Contracts" />
+      <xsd:import schemaLocation="http://localhost:8000/Indirizzario/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/Indirizzario/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Indirizzario.Db.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICom_AddPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPerson" />
+  </wsdl:message>
+  <wsdl:message name="ICom_AddPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICom_AddAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICom_AddAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICom">
+    <wsdl:operation name="AddPerson">
+      <wsdl:input wsaw:Action="Indirizzario.Wcf.Contracts/ICom/AddPerson" message="tns:ICom_AddPerson_InputMessage" />
+      <wsdl:output wsaw:Action="Indirizzario.Wcf.Contracts/ICom/AddPersonResponse" message="tns:ICom_AddPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <wsdl:input wsaw:Action="Indirizzario.Wcf.Contracts/ICom/AddAddress" message="tns:ICom_AddAddress_InputMessage" />
+      <wsdl:output wsaw:Action="Indirizzario.Wcf.Contracts/ICom/AddAddressResponse" message="tns:ICom_AddAddress_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
